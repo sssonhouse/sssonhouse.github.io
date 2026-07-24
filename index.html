@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F1E9" />
+  <meta name="description" content="ssson house가 고른 홈·라이프 아이템 모음" />
+  <title>ssson house Picks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-sticker" aria-hidden="true">
+        <span class="ear ear-left"></span>
+        <span class="ear ear-right"></span>
+        <svg viewBox="0 0 48 48" role="img">
+          <path d="M13 24.5 24 14l11 10.5V36H28v-8h-8v8h-7z"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">CURATED FOR COZY DAYS</p>
+
+      <h1>
+        <span class="brand-main">ssson house</span>
+        <span class="brand-script">Picks</span>
+      </h1>
+
+      <p class="hero-copy">
+        우리 집에 오래 두고 싶은 것들만<br>
+        차곡차곡 모아두는 작은 셀렉트숍
+      </p>
+
+      <div class="affiliate-notice">
+        <p>오늘의집 큐레이터 활동을 통해 구매 시 일정액의 수수료를 제공받습니다.</p>
+        <p>쿠팡 파트너스 활동을 통해 구매 시 일정액의 수수료를 제공받습니다.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="상품 탐색">
+        <div class="category-scroll" id="categoryScroll"></div>
+
+        <div class="sort-row">
+          <p class="count-copy"><strong id="visibleCount">0</strong>개의 아이템</p>
+          <div class="sort-control">
+            <button type="button" class="sort-button active" data-sort="latest">최신순</button>
+            <button type="button" class="sort-button" data-sort="name">이름순</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-grid" id="productGrid" aria-live="polite"></section>
+
+      <section class="empty-state" id="emptyState" hidden>
+        <div class="empty-face">˶ᵔ ᵕ ᵔ˶</div>
+        <p>아직 담긴 아이템이 없어요.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>made with care by ssson house</p>
+      <span>♡</span>
+    </footer>
+  </div>
+
+  <template id="productTemplate">
+    <article class="product-card">
+      <div class="card-topline">
+        <span class="brand-pill"></span>
+        <span class="category-label"></span>
+      </div>
+
+      <a class="image-link" target="_blank" rel="noopener sponsored">
+        <div class="image-wrap">
+          <img class="product-image" alt="" loading="lazy" />
+          <span class="image-badge">view</span>
+        </div>
+      </a>
+
+      <div class="card-body">
+        <h2 class="product-name"></h2>
+        <p class="product-description"></p>
+
+        <div class="shop-buttons">
+          <a class="shop-button todayhouse" target="_blank" rel="noopener sponsored">
+            <span class="button-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.5 10.8 12 4l7.5 6.8v8.1a1.1 1.1 0 0 1-1.1 1.1h-4.2v-5.6H9.8V20H5.6a1.1 1.1 0 0 1-1.1-1.1z"/>
+              </svg>
+            </span>
+            <span class="button-copy">
+              <small>오늘의집</small>
+              <strong>보러 가기</strong>
+            </span>
+            <span class="external-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 16 16 8M10 8h6v6"/>
+              </svg>
+            </span>
+          </a>
+
+          <a class="shop-button coupang" target="_blank" rel="noopener sponsored">
+            <span class="button-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.3 7.2a7 7 0 1 0 0 9.6"/>
+              </svg>
+            </span>
+            <span class="button-copy">
+              <small>쿠팡</small>
+              <strong>보러 가기</strong>
+            </span>
+            <span class="external-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 16 16 8M10 8h6v6"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
