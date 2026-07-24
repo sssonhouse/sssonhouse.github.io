@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#fbf8f3;
+  --surface:#fffdf9;
+  --soft:#f4ede5;
+  --line:#e7d8ca;
+  --text:#3f3028;
+  --muted:#9f9186;
+  --brown:#4b3024;
+  --blue:#43acd4;
+  --shadow:0 8px 22px rgba(84,61,44,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Noto Sans KR",sans-serif;
+}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+a{color:inherit;text-decoration:none}
+.page{max-width:1040px;margin:auto;padding:0 28px 34px}
+.hero{
+  min-height:500px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.topbar{position:absolute;top:28px;left:0;right:0;display:flex;justify-content:space-between}
+.icon-button{border:0;background:transparent;color:#66564a;width:46px;height:46px;padding:10px}
+.menu span{display:block;width:26px;height:2px;background:currentColor;margin:6px 0;border-radius:3px}
+.search{background:#f5eee7;border-radius:50%}
+.search svg,.house-outline svg{fill:none;stroke:currentColor;stroke-width:1.8}
+.cat-logo{width:86px;height:86px;color:#66564a}
+.cat-logo svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero h1{
+  margin:0;
+  font-family:"DM Serif Display",serif;
+  font-size:78px;
+  font-weight:400;
+  line-height:.95;
+  color:#df9b7c;
+}
+.subtitle{font-family:"DM Serif Display",serif;font-style:italic;font-size:31px;margin:12px 0 24px}
+.intro{font-size:18px;color:var(--muted);margin:0}
+.scroll{font-size:13px;color:#b7a89c;margin-top:28px;line-height:1.2}
+.scroll span{font-size:22px}
+.spark{position:absolute;color:#dfb59f;font-size:29px;font-weight:300}
+.spark-a{left:15%;top:38%}.spark-b{left:21%;top:47%}.spark-c{right:18%;top:39%}.spark-d{right:12%;top:47%}
+
+.categories{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding:13px;
+  border-radius:40px;
+  background:#f3ebe3;
+}
+.categories::-webkit-scrollbar{display:none}
+.category{
+  flex:1 0 150px;
+  min-height:64px;
+  border:1px solid var(--line);
+  border-radius:32px;
+  background:var(--surface);
+  color:#79685c;
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-size:17px;
+}
+.category svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8}
+.category .num{color:#b7a89e;font-weight:600}
+.category.active{background:var(--brown);color:#fff;border-color:var(--brown)}
+.category.active .num{color:#cbbab0}
+
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin:48px 0 25px}
+.toolbar p{margin:0;font-size:19px;color:#9c8c80}.toolbar strong{color:var(--text)}
+.sort{display:flex;background:#efe7df;border-radius:25px;padding:6px}
+.sort button{border:0;background:transparent;color:#a19287;padding:12px 22px;border-radius:19px;font-weight:600;font-size:15px}
+.sort button.active{background:#fff;color:var(--text);box-shadow:0 4px 12px rgba(80,57,43,.08)}
+
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
+.photo-wrap{position:relative;aspect-ratio:1/1;overflow:hidden;background:#eee}
+.photo{width:100%;height:100%;object-fit:cover;display:block}
+.heart{
+  position:absolute;right:18px;top:18px;width:58px;height:58px;border-radius:50%;
+  border:0;background:rgba(255,255,255,.94);font-size:31px;color:#4d392e;
+  display:grid;place-items:center;box-shadow:0 5px 14px rgba(50,35,26,.08)
+}
+.info{padding:18px 18px 20px}
+.name{font-size:18px;line-height:1.3;margin:0 0 14px;font-weight:700}
+.shop-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.shop{
+  min-height:52px;border:1px solid var(--line);border-radius:16px;background:#fff;
+  display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:600
+}
+.shop.house{background:var(--blue);color:#fff;border-color:var(--blue)}
+.shop svg{width:22px;height:22px;fill:currentColor}
+.shop.coupang img{width:78px;height:auto;display:block}
+.shop.placeholder{visibility:hidden}
+
+.bottom-links{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:64px 0 20px}
+.bottom-link{
+  min-height:78px;border:1px solid var(--line);border-radius:24px;background:var(--surface);
+  display:flex;align-items:center;justify-content:center;gap:16px;font-size:16px;font-weight:500;
+  box-shadow:var(--shadow)
+}
+.bottom-icon{width:30px;height:30px}.bottom-icon svg{width:100%;height:100%}
+.youtube-mark{display:grid;place-items:center;width:32px;height:23px;border-radius:7px;background:#e52d2d;color:white;font-size:13px}
+.notice{text-align:center;color:#aa9d94;font-size:11px;line-height:1.7}
+.notice p{margin:0}
+footer{text-align:center;color:#ad9f95;font-size:18px;padding-top:8px}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:70px 0}
+
+@media(max-width:600px){
+  .page{padding:0 16px 28px}
+  .hero{min-height:430px}
+  .topbar{top:20px}
+  .cat-logo{width:66px;height:66px}
+  .hero h1{font-size:61px}
+  .subtitle{font-size:25px;margin:8px 0 19px}
+  .intro{font-size:14px}
+  .spark{font-size:21px}
+  .categories{gap:9px;padding:10px;border-radius:31px}
+  .category{flex-basis:135px;min-height:58px;font-size:14px;gap:8px}
+  .category svg{width:20px;height:20px}
+  .toolbar{margin:35px 2px 20px}
+  .toolbar p{font-size:16px}
+  .sort button{font-size:13px;padding:10px 17px}
+  .grid{gap:11px}
+  .card{border-radius:22px}
+  .heart{width:51px;height:51px;right:12px;top:12px;font-size:27px}
+  .info{padding:14px 11px 15px}
+  .name{font-size:15px;margin-bottom:11px}
+  .shop-row{gap:6px}
+  .shop{min-height:46px;padding:6px 4px;border-radius:13px;font-size:11px}
+  .shop span{display:none}
+  .shop.coupang img{width:61px}
+  .bottom-links{gap:10px;margin-top:46px}
+  .bottom-link{min-height:65px;border-radius:20px;font-size:13px;gap:10px}
+}
+@media(max-width:360px){
+  .grid{grid-template-columns:1fr}
+  .shop span{display:inline}
+  .bottom-links{grid-template-columns:1fr}
+}

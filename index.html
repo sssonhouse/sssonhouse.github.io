@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="ssson house의 cozy home picks">
+  <title>Picks for cozy home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="topbar">
+        <button class="icon-button menu" aria-label="메뉴"><span></span><span></span><span></span></button>
+        <button class="icon-button search" aria-label="검색">
+          <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4 4"/></svg>
+        </button>
+      </div>
+
+      <div class="cat-logo" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <path d="M42 35 35 20l15 7c7-4 15-4 22 0l15-7-5 18"/>
+          <path d="M43 35c-7 8-9 19-7 30 2 13 9 22 18 26"/>
+          <path d="M81 37c9 9 13 23 10 36-3 12-10 18-18 20"/>
+          <path d="M53 90v12M68 89v13M53 102h15"/>
+          <path d="M89 72c15 4 20 13 18 20-2 8-12 11-23 6"/>
+          <circle cx="52" cy="43" r="1.4" fill="currentColor"/>
+          <circle cx="69" cy="43" r="1.4" fill="currentColor"/>
+          <path d="M58 50h5M60.5 50v4M47 50h-9M47 54h-10M74 50h9M74 54h10"/>
+        </svg>
+      </div>
+
+      <span class="spark spark-a">✦</span>
+      <span class="spark spark-b">✦</span>
+      <span class="spark spark-c">✦</span>
+      <span class="spark spark-d">✦</span>
+
+      <h1>Picks</h1>
+      <p class="subtitle">for cozy home ♡</p>
+      <p class="intro">A small collection of things we love.</p>
+      <div class="scroll">scroll<br><span>⌄</span></div>
+    </header>
+
+    <main>
+      <nav id="categories" class="categories" aria-label="상품 카테고리"></nav>
+
+      <section class="toolbar">
+        <p><strong id="itemCount">0</strong>개의 아이템</p>
+        <div class="sort">
+          <button class="active" data-sort="new">최신순</button>
+          <button data-sort="name">이름순</button>
+        </div>
+      </section>
+
+      <section id="productGrid" class="grid" aria-live="polite"></section>
+
+      <section class="bottom-links">
+        <a id="allHouseLink" class="bottom-link" target="_blank" rel="noopener sponsored">
+          <span class="bottom-icon house-outline">
+            <svg viewBox="0 0 24 24"><path d="M4.5 10.8 12 4l7.5 6.8v8.1a1.1 1.1 0 0 1-1.1 1.1h-4.2v-5.6H9.8V20H5.6a1.1 1.1 0 0 1-1.1-1.1z"/></svg>
+          </span>
+          <span>오늘의집 전체보기 ↗</span>
+        </a>
+
+        <a id="youtubeLink" class="bottom-link" target="_blank" rel="noopener">
+          <span class="youtube-mark">▶</span>
+          <span>유튜브 바로가기 ↗</span>
+        </a>
+      </section>
+
+      <section class="notice">
+        <p>오늘의집 큐레이터 활동을 통해 구매 시 일정액의 수수료를 제공받습니다.</p>
+        <p>쿠팡 파트너스 활동을 통해 구매 시 일정액의 수수료를 제공받습니다.</p>
+      </section>
+    </main>
+
+    <footer>♡</footer>
+  </div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
